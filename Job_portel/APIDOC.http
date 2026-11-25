@@ -1,0 +1,88 @@
+###
+GET http://127.0.0.1:8000/jobs/
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzk1NTA3MDA1LCJpYXQiOjE3OTU1MDY3MDYsImp0aSI6IjYwY2M3ZDgyODljZDQwMjFhMzdhNWIwZTJmMzU3M2E2IiwidXNlcl9pZCI6IjIifQ.GjQhpeEAZGvgTgX7OW1WlMnwpMo2mHEGK827GdktQxE
+
+###
+POST http://127.0.0.1:8000/jobs/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzk1NTA3MDA1LCJpYXQiOjE3OTU1MDY3MDYsImp0aSI6IjYwY2M3ZDgyODljZDQwMjFhMzdhNWIwZTJmMzU3M2E2IiwidXNlcl9pZCI6IjIifQ.GjQhpeEAZGvgTgX7OW1WlMnwpMo2mHEGK827GdktQxE
+
+{
+    "title":"front-end devleoper",
+    "company":"wipro",
+    "description":"front-end devleoper",
+    "salary":"2LPA",
+    "job_type":"Full time",
+    "experience_required": "Fresher",
+    "skills": "Python, html,css"
+}
+
+###
+GET http://127.0.0.1:8000/jobs/1/
+Accept: application/json
+
+###
+PUT http://127.0.0.1:8000/jobs/1/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzk1NDU5MTY5LCJpYXQiOjE3OTU0NTg4NjksImp0aSI6ImQ4ZWQwOTViOWRmZjRkMjk4YjhjM2M5NTQxOTNlODhlIiwidXNlcl9pZCI6IjIifQ.8cySO_Dh6VZAKZNSubOtks_EHaUn1Y5a1ieLFLqtkyM
+
+{
+    "title":"java developer",
+    "company":"kmml",
+    "description":"Django developer",
+    "salary":"4LPA",
+    "job_type":"Full time",
+    "experience_required": "Fresher",
+    "skills": "java, Django",
+}
+
+  ###
+DELETE http://127.0.0.1:8000/jobs/1/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzk1MzgwMzQwLCJpYXQiOjE3OTUzODAwNDAsImp0aSI6IjBjZmQxMmU2MjgwNTQwNjJiY2ZiM2ZjZWE1MjczNjcyIiwidXNlcl9pZCI6IjEifQ.-OlajlblsX5Z5QG3V2UtkImV2wT3pNEZOTt7TOQwwMc
+
+###
+POST http://127.0.0.1:8000/register/
+Content-Type: application/json
+
+{
+    "username":"hari",
+    "email":"hari@gmail.com",
+    "password":"hari123"
+}
+
+###
+POST http://127.0.0.1:8000/jwt_login/
+Content-Type: application/json
+
+{
+    "username":"hari",
+    "password":"hari123"
+}
+
+###
+POST http://127.0.0.1:8000/jwt_refresh/
+Content-Type: application/json
+
+{
+    "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc5NTU5MzEwNSwiaWF0IjoxNzk1NTA2NzA1LCJqdGkiOiI2MjlmMTFkNDFlMGE0ODgzYTNhYTI0OWI4MzA2M2Y4YiIsInVzZXJfaWQiOiIyIn0.FPNTODlMcpjFP7NrFdPQUKi8DN9_q_wBL_nB_06KuDE"
+
+}
+
+###
+GET http://127.0.0.1:8000/myjob/
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzk1NTA3MDA1LCJpYXQiOjE3OTU1MDY3MDYsImp0aSI6IjYwY2M3ZDgyODljZDQwMjFhMzdhNWIwZTJmMzU3M2E2IiwidXNlcl9pZCI6IjIifQ.GjQhpeEAZGvgTgX7OW1WlMnwpMo2mHEGK827GdktQxE
+
+###
+POST http://127.0.0.1:8000/apply/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzk1NTU2MTAxLCJpYXQiOjE3OTU1NTU4MDEsImp0aSI6IjUxYWZkNjBjNzYzYjRlNWY5MWU4MzA4YWQwNmNiMzc0IiwidXNlcl9pZCI6IjIifQ.ZSO9Qn7JE61Isj4zHROhmJ6Osy8d-s0GzvrgRxEsUDA
+
+{
+    "job": 1
+}
+
+###
+GET http://127.0.0.1:8000/myapplications/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzk1NTU2MTAxLCJpYXQiOjE3OTU1NTU4MDEsImp0aSI6IjUxYWZkNjBjNzYzYjRlNWY5MWU4MzA4YWQwNmNiMzc0IiwidXNlcl9pZCI6IjIifQ.ZSO9Qn7JE61Isj4zHROhmJ6Osy8d-s0GzvrgRxEsUDA
